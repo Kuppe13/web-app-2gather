@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { Routes, Route } from "react-router";
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import CreatePage from "./pages/CreatePage";
@@ -7,7 +7,7 @@ import UpdatePage from "./pages/UpdatePage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -15,7 +15,7 @@ function App() {
         <Route path="/posts/:id" element={<PostDetailPage />} />
         <Route path="/posts/:id/update" element={<UpdatePage />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 
