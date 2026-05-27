@@ -38,7 +38,7 @@ export default function PostDetailPage() {
         <img src={post.image} alt={post.title} />
         <div className="post-detail-body">
           <p className="post-meta">Post #{post.id}</p>
-          <p className="post-detail-caption">{post.title}</p>
+          <h1 className="post-detail-title">{post.title}</h1>
           <p>{post.date}</p>
           <p>{post.location}</p>
           <div className="post-detail-actions">
