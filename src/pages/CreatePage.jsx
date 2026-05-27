@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const URL = import.meta.env.VITE_SUPABASE_URL;
 const headers = {
