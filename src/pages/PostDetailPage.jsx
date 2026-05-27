@@ -35,10 +35,12 @@ export default function PostDetailPage() {
     <main className="app">
       <h1 className="page-title">Post Details</h1>
       <article className="post-detail">
-        <img src={post.image} alt={post.caption} />
+        <img src={post.image} alt={post.title} />
         <div className="post-detail-body">
           <p className="post-meta">Post #{post.id}</p>
-          <p className="post-detail-caption">{post.caption}</p>
+          <p className="post-detail-caption">{post.title}</p>
+          <p>{post.date}</p>
+          <p>{post.location}</p>
           <div className="post-detail-actions">
             <Link to={`/posts/${id}/update`} className="btn btn-primary">
               Edit
