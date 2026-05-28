@@ -53,14 +53,6 @@ export default function PostDetailPage() {
             vil blive serveret snacks og sodavand.
           </p>
           <button className="join-btn">Deltag</button>
-          <div className="post-detail-actions">
-            <Link to={`/posts/${id}/update`} className="btn btn-primary">
-              Edit
-            </Link>
-            <button className="btn btn-danger" onClick={handleDelete}>
-              Delete
-            </button>
-          </div>
         </div>
       </article>
     </main>
