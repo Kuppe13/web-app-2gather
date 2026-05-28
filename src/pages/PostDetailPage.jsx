@@ -5,7 +5,7 @@ import heartIcon from "../assets/icons/heart-icon.svg";
 import shareIcon from "../assets/icons/share-icon.svg";
 import calendarIcon from "../assets/icons/uit_calendar.svg";
 import locationIcon from "../assets/icons/carbon_location.svg";
-import 2peopleIcon from "../assets/icons/2people-icon.svg";
+import 2peopleIcon from "../assets/icons/twoPeople-icon.svg";
 
 
 const URL = import.meta.env.VITE_SUPABASE_URL;
