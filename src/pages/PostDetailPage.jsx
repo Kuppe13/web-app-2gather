@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
+import heartIcon from "../icons/heart-icon.svg";
+import shareIcon from "../icons/share-icon.svg";
+import calendarIcon from "../icons/uit_calender.svg";
+import locationIcon from "../icons/carbon_location.svg";
+import twoPeopleIcon from "../icons/twoPeople-icon.svg";
+
 const URL = import.meta.env.VITE_SUPABASE_URL;
 const headers = {
   apikey: import.meta.env.VITE_SUPABASE_APIKEY,
@@ -33,22 +39,62 @@ export default function PostDetailPage() {
 
   return (
     <main className="app">
-      <h1 className="page-title">Post Details</h1>
       <article className="post-detail">
-        <img src={post.image} alt={post.title} />
-        <div className="post-detail-body">
-          <p className="post-meta">Post #{post.id}</p>
-          <p className="post-detail-caption">{post.title}</p>
-          <p>{post.date}</p>
-          <p>{post.location}</p>
-          <div className="post-detail-actions">
-            <Link to={`/posts/${id}/update`} className="btn btn-primary">
-              Edit
-            </Link>
-            <button className="btn btn-danger" onClick={handleDelete}>
-              Delete
+        <div className="image-wrapper">
+          <img src={post.image} alt={post.title} />
+          <div className="top-icons">
+            <button className="icon-btn">
+              <img src={heartIcon} alt="favorite" />
+            </button>
+            <button className="icon-btn">
+              <img src={shareIcon} alt="share" className="share-icon" />
             </button>
           </div>
+        </div>
+        <div className="post-detail-body">
+          <h1 className="post-detail-title">{post.title}</h1>
+          <p className="post-date">{post.date}</p>
+          <p className="post-location">{post.location}</p>
+          <h3 className="section-title">Om eventet</h3>
+          <p className="event-description">
+            Kom til en hyggelig dag, hvor vi maler keramik efter egen lyst. Der
+            vil blive serveret snacks og sodavand.
+          </p>
+          <h3 className="section-title">Arrangør</h3>
+          <div className="organizer">
+            <img
+              src="https://i.pravatar.cc/100?img=32"
+              alt="Anna"
+              className="organizer-avatar"
+            />
+            <p className="organizer-name">Anna L.</p>
+            <p className="organizer-rating">⭐ 4.8 (12 events)</p>
+          </div>
+          <h3 className="section-title">Deltagere (22)</h3>
+          <div className="participants">
+            <img
+              src="https://i.pravatar.cc/100?img=12"
+              alt=""
+              className="participant-avatar"
+            />
+            <img
+              src="https://i.pravatar.cc/100?img=15"
+              alt=""
+              className="participant-avatar"
+            />
+            <img
+              src="https://i.pravatar.cc/100?img=18"
+              alt=""
+              className="participant-avatar"
+            />
+            <div className="participant-count">+19</div>
+          </div>
+          <div className="solo-box">
+            <h4>12 deltager alene</h4>
+
+            <p>Perfekt mulighed for at møde nye mennesker!</p>
+          </div>
+          <button className="join-btn">Deltag</button>
         </div>
       </article>
     </main>
