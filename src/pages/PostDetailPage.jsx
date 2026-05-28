@@ -39,11 +39,21 @@ export default function PostDetailPage() {
 
   return (
     <main className="app">
-      <h1 className="page-title">Post Details</h1>
       <article className="post-detail">
-        <img src={post.image} alt={post.title} />
+        <div className="image-wrapper">
+          <img src={post.image} alt={post.title} />
+
+          <div className="top-icons">
+            <button className="icon-btn">
+              <img src={heartIcon} alt="favorite" />
+            </button>
+
+            <button className="icon-btn">
+              <img src={shareIcon} alt="share" />
+            </button>
+          </div>
+        </div>
         <div className="post-detail-body">
-          <p className="post-meta">Post #{post.id}</p>
           <h1 className="post-detail-title">{post.title}</h1>
           <p className="post-date">{post.date}</p>
           <p className="post-location">{post.location}</p>
