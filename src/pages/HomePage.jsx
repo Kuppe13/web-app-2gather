@@ -26,7 +26,8 @@ export default function HomePage() {
     <main className="app">
       <section className="feed-intro">
         <p className="feed-eyebrow">2GATHER</p>
-        <h1 className="page-title">Find dit næste event her!</h1>
+        <h1 className="page-title">Find dit næste event her!!</h1>
+        <h2 className="feed-subtitle">Populære events i dag</h2>
       </section>
 
       <section className="post-grid">
