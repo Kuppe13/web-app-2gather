@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-import heartIcon from "../assets/icons/heart-icon.svg";
-import shareIcon from "../assets/icons/share-icon.svg";
-import calendarIcon from "../assets/icons/uit_calendar.svg";
-import locationIcon from "../assets/icons/carbon_location.svg";
-import 2peopleIcon from "../assets/icons/twoPeople-icon.svg";
-
+import heartIcon from "../icons/heart-icon.svg";
+import shareIcon from "../icons/share-icon.svg";
+import calendarIcon from "../icons/uit_calender.svg";
+import locationIcon from "../icons/carbon_location.svg";
+import twoPeopleIcon from "../icons/twoPeople-icon.svg";
 
 const URL = import.meta.env.VITE_SUPABASE_URL;
 const headers = {
