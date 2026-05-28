@@ -42,14 +42,12 @@ export default function PostDetailPage() {
       <article className="post-detail">
         <div className="image-wrapper">
           <img src={post.image} alt={post.title} />
-
           <div className="top-icons">
             <button className="icon-btn">
               <img src={heartIcon} alt="favorite" />
             </button>
-
             <button className="icon-btn">
-              <img src={shareIcon} alt="share" />
+              <img src={shareIcon} alt="share" className="share-icon" />
             </button>
           </div>
         </div>
@@ -62,6 +60,35 @@ export default function PostDetailPage() {
             Kom til en hyggelig dag, hvor vi maler keramik efter egen lyst. Der
             vil blive serveret snacks og sodavand.
           </p>
+          <h3 className="section-title">Arrangør</h3>
+          <div className="organizer">
+            <img
+              src="https://i.pravatar.cc/100?img=32"
+              alt="Anna"
+              className="organizer-avatar"
+            />
+            <p className="organizer-name">Anna L.</p>
+            <p className="organizer-rating">⭐ 4.8 (12 events)</p>
+          </div>
+          <h3 className="section-title">Deltagere (22)</h3>
+          <div className="participants">
+            <img
+              src="https://i.pravatar.cc/100?img=12"
+              alt=""
+              className="participant-avatar"
+            />
+            <img
+              src="https://i.pravatar.cc/100?img=15"
+              alt=""
+              className="participant-avatar"
+            />
+            <img
+              src="https://i.pravatar.cc/100?img=18"
+              alt=""
+              className="participant-avatar"
+            />
+            <div className="participant-count">+19</div>
+          </div>
           <button className="join-btn">Deltag</button>
         </div>
       </article>
