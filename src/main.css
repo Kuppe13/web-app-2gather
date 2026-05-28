@@ -1,13 +1,15 @@
 :root {
-  --green: rgb(38, 76, 89);
-  --dark-green: rgb(9, 47, 59);
-  --light-green: rgb(172, 198, 201);
-  --text-color-danger: #f44250;
-  --text-color-dark: #333;
-  --text-color-light: #f1f1f1;
-  --white: #f1f1f1;
-  --shadow-soft: 0 0 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
-  --shadow-card: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  --Indigo: #212844;
+  --Pang-orange: #ff981a;
+  --bg-color: #fffafa;
+  --Silky-white: #f7f3e7;
+  --Green: #39dc4c;
+  --Red: #ef2b2b;
+  --Light-grey: #d9d9d9;
+  --text-color: #191818;
+  --h1-font: "Merge One", serif;
+  --h2-font: "Cal Sans", sans-serif;
+  --body-font: "Poppins", sans-serif;
 }
 
 html {
@@ -305,44 +307,95 @@ a:hover {
 }
 
 .post-detail {
-  padding: 1.5em;
-  transition: 0.5s;
-  border-radius: 10px;
-  display: grid;
-  grid-template-columns: minmax(280px, 1.2fr) minmax(0, 1fr);
-  gap: 1.5em;
-  align-items: start;
+  background: white;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width:390px
+  min-height: 844px;
+  margin: 0 auto;
 }
 
 .post-detail img {
   width: 100%;
-  height: 380px;
+  height: 320px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 .post-detail-body {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1rem;
+  padding: 1.5rem;
 }
 
 .post-meta {
   margin: 0;
-  color: var(--dark-green);
+  color: var(--Indigo);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.85rem;
   font-weight: 600;
 }
 
-.post-detail-title {
-  font-size: 2rem;
-  font-weight: 700;
+.post-date,
+.post-location {
   margin: 0;
-  color: var(--dark-green);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
 }
 
+.post-date {
+  color: var(--text-color-dark);
+}
+
+.post-detail-body .post-location {
+  color: #0250a9;
+}
+
+.post-detail-title {
+  font-family: var(--h2-font);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--Indigo);
+}
+
+.section-title {
+  font-family: var(--body-font);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.event-description {
+  font-family: var(--body-font);
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.join-btn {
+  width: 100%;
+  background: var(--Pang-orange);
+  border: none;
+  border-radius: 16px;
+  padding: 18px;
+  font-family: var(--body-font);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--Indigo);
+  cursor: pointer;
+  margin-top: auto;
+}
 .post-detail-actions {
   display: flex;
   gap: 0.5em;
