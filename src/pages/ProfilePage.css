@@ -10,3 +10,34 @@
   padding-top: 140px;
   padding-left: 40px;
 }
+
+.profile-page {
+  padding-top: 140px;
+  padding-left: 40px;
+}
+
+.profile-card {
+  background: #f4f1e8;
+  width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.profile-top {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile-info button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 999px;
+  background: orange;
+  cursor: pointer;
+}
