@@ -1,6 +1,6 @@
 import "./ProfilePage.css";
 
-function ProfilePage() {
+export default function ProfilePage() {
   return (
     <div className="profile-page">
       <div className="profile-card">
@@ -15,6 +15,23 @@ function ProfilePage() {
             <h2>Kübra</h2>
             <p>@kubrafidan</p>
 
+            <div className="profile-stats">
+              <div>
+                <h3>35</h3>
+                <p>Venner</p>
+              </div>
+
+              <div>
+                <h3>7</h3>
+                <p>Begivenheder</p>
+              </div>
+
+              <div>
+                <h3>6</h3>
+                <p>Gemte events</p>
+              </div>
+            </div>
+
             <button>Tilføj</button>
           </div>
         </div>
@@ -22,5 +39,3 @@ function ProfilePage() {
     </div>
   );
 }
-
-export default ProfilePage;

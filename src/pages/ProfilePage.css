@@ -41,3 +41,11 @@
   background: orange;
   cursor: pointer;
 }
+
+.about-card {
+  background: white;
+  width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
