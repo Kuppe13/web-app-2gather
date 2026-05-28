@@ -1,0 +1,25 @@
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.profile-stats div {
+  text-align: center;
+  flex: 1;
+}
+
+.profile-stats h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profile-stats p {
+  margin: 0;
+  font-size: 14px;
+}
