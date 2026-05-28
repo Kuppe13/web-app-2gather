@@ -423,6 +423,75 @@ a:hover {
   color: var(--text-color);
 }
 
+.organizer-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.organizer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.organizer-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.organizer-rating {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.participants {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.participant-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -8px;
+}
+
+.participant-avatar:first-child {
+  margin-left: 0;
+}
+
+.participant-count {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin-left: -8px;
+}
+
+.solo-box {
+  background: #ece7e7;
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.solo-box h4 {
+  margin: 0 0 8px;
+}
+
+.solo-box p {
+  margin: 0;
+  font-size: 14px;
+}
+
 .join-btn {
   width: 274px;
   height: 58px;

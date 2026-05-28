@@ -89,6 +89,11 @@ export default function PostDetailPage() {
             />
             <div className="participant-count">+19</div>
           </div>
+          <div className="solo-box">
+            <h4>12 deltager alene</h4>
+
+            <p>Perfekt mulighed for at møde nye mennesker!</p>
+          </div>
           <button className="join-btn">Deltag</button>
         </div>
       </article>
