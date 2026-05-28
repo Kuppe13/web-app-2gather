@@ -36,6 +36,14 @@ export default function ProfilePage() {
           </div>
         </div>
       </div>
+      <div className="about-card">
+        <h3>Om mig:</h3>
+
+        <p>
+          Jeg er lige flyttet til Aarhus og vil ud og opleve byen og måske møde
+          nye mennesker med samme interesser!
+        </p>
+      </div>
     </div>
   );
 }
