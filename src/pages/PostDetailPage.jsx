@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
+import heartIcon from "../assets/icons/heart-icon.svg";
+import shareIcon from "../assets/icons/share-icon.svg";
+import calendarIcon from "../assets/icons/uit_calendar.svg";
+import locationIcon from "../assets/icons/carbon_location.svg";
+import 2peopleIcon from "../assets/icons/2people-icon.svg";
+
+
 const URL = import.meta.env.VITE_SUPABASE_URL;
 const headers = {
   apikey: import.meta.env.VITE_SUPABASE_APIKEY,
@@ -39,8 +46,14 @@ export default function PostDetailPage() {
         <div className="post-detail-body">
           <p className="post-meta">Post #{post.id}</p>
           <h1 className="post-detail-title">{post.title}</h1>
-          <p>{post.date}</p>
-          <p>{post.location}</p>
+          <p className="post-date">{post.date}</p>
+          <p className="post-location">{post.location}</p>
+          <h3 className="section-title">Om eventet</h3>
+          <p className="event-description">
+            Kom til en hyggelig dag, hvor vi maler keramik efter egen lyst. Der
+            vil blive serveret snacks og sodavand.
+          </p>
+          <button className="join-btn">Deltag</button>
           <div className="post-detail-actions">
             <Link to={`/posts/${id}/update`} className="btn btn-primary">
               Edit
