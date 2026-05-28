@@ -10,6 +10,9 @@ export default function Header() {
         <NavLink to="/create" className="nav-link">
           Create Post
         </NavLink>
+        <NavLink to="/profile/1" className="nav-link">
+          Profile
+        </NavLink>
       </nav>
     </header>
   );

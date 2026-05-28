@@ -146,8 +146,9 @@ a:hover {
   max-width: 1600px;
   width: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  display: flex;
+  justify-content: center;
   gap: 1em;
 }
 
