@@ -161,7 +161,7 @@
   margin: 0;
   font-size: 14px;
   color: var(--text-color);
-  font
+  font-family: var(--body-font);
 }
 .rating-icon {
   width: 16px;
@@ -210,7 +210,7 @@
   max-width: none;
 }
 .solo-box {
- width: 358px;
+  width: 358px;
   height: 65px;
   background: var(--Light-grey);
   border-radius: 12px;
@@ -221,7 +221,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .solo-box-top {
