@@ -8,6 +8,7 @@ import shareIcon from "../icons/share-icon.svg";
 import calendarIcon from "../icons/uit_calender.svg";
 import locationIcon from "../icons/carbon_location.svg";
 import twoPeopleIcon from "../icons/twoPeople-icon.svg";
+import starIcon from "../icons/star-icon.svg";
 import peopleIcon from "../icons/people-team-28-regular.svg";
 import annaImg from "../images/anna.avif";
 import personOneImg from "../images/person1.avif";
@@ -91,9 +92,14 @@ export default function PostDetailPage() {
             <div className="organizer-info">
               <p className="organizer_name">{post.organizer_name}</p>
 
-              <p className="organizer-rating">⭐ 4.8 (12 events)</p>
+              <div className="organizer-rating">
+                <img src={starIcon} alt="rating" className="rating-icon" />
+
+                <p>4.8 (12 events)</p>
+              </div>
             </div>
           </div>
+
           <h3 className="section-title participants-title">Deltagere (22)</h3>
 
           <div className="participants">
