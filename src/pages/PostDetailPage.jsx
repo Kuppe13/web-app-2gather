@@ -131,6 +131,9 @@ export default function PostDetailPage() {
               </div>
             </div>
             <button className="join-btn">Deltag</button>
+            <button className="delete-btn" onClick={handleDelete}>
+              Slet
+            </button>
           </div>
         </div>
       </article>
