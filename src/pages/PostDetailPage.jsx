@@ -117,18 +117,24 @@ export default function PostDetailPage() {
               alt="Participant 3"
               className="participant-avatar"
             />
+
             <div className="participant-count">
               <span>+19</span>
             </div>
-          </div>
-          <div className="solo-box">
-            <h4>12 deltager alene</h4>
-            <div className="solo-text-row">
-              <p>Perfekt mulighed for at møde nye mennesker!</p>
-              <img src={peopleIcon} alt="People icon" className="solo-icon" />
+            <div className="solo-box">
+              <h4>12 deltager alene</h4>
+
+              <div className="solo-text-row">
+                <p>Perfekt mulighed for at møde nye mennesker!</p>
+
+                <img src={peopleIcon} alt="People icon" className="solo-icon" />
+              </div>
             </div>
+            <button className="join-btn">Deltag</button>
+            <button className="delete-btn" onClick={handleDelete}>
+              Slet
+            </button>
           </div>
-          <button className="join-btn">Deltag</button>
         </div>
       </article>
     </main>
