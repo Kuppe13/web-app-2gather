@@ -128,6 +128,7 @@
 
 .participants-title {
   margin-top: 16px;
+  font-family: var(--body-font);
 }
 .organizer-avatar {
   width: 32px !important;
@@ -147,7 +148,7 @@
 .organizer_name {
   margin: 0;
   font-weight: 600;
-  font-size: var(--body-font);
+  font-family: var(--body-font);
 }
 
 .organizer-rating {
@@ -160,6 +161,7 @@
   margin: 0;
   font-size: 14px;
   color: var(--text-color);
+  font
 }
 .rating-icon {
   width: 16px;
@@ -186,15 +188,21 @@
 }
 
 .participant-count {
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: var(--Light-grey);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 12px;
+  font-weight: 700px !important;
   margin-left: -8px;
+}
+
+.participant-count span {
+  font-weight: 700;
+  font-size: var(--body-font);
 }
 
 .organizer img,
@@ -202,10 +210,18 @@
   max-width: none;
 }
 .solo-box {
+ width: 358px;
+  height: 65px;
   background: var(--Light-grey);
-  border-radius: 16px;
-  padding: 16px;
+  border-radius: 12px;
+  padding: 8px 16px;
   margin-top: 16px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 .solo-box-top {
@@ -223,25 +239,30 @@
 }
 
 .solo-box h4 {
-  margin: 0;
-  font-size: 16px;
+  margin: 0 0 4px;
+  font-family: var(--body-font);
+  font-size: 14px;
   font-weight: 600;
+  line-height: 20px;
+  text-align: center;
 }
 
 .solo-box p {
   margin: 0;
   font-size: 14px;
+  line-height: 20px;
+}
+
+.solo-box h4,
+.solo-box p {
+  text-align: center;
 }
 
 .solo-text-row {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-}
-
-.solo-box p {
-  margin: 0;
-  font-size: 14px;
 }
 
 .join-btn {
@@ -258,9 +279,4 @@
   cursor: pointer;
   align-self: center;
   margin-top: 16px;
-}
-
-.post-detail-actions {
-  display: flex;
-  gap: 0.5em;
 }

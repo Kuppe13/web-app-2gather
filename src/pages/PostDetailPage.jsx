@@ -9,7 +9,7 @@ import calendarIcon from "../icons/uit_calender.svg";
 import locationIcon from "../icons/carbon_location.svg";
 import twoPeopleIcon from "../icons/twoPeople-icon.svg";
 import starIcon from "../icons/star-icon.svg";
-import peopleIcon from "../icons/people-team-28-regular.svg";
+import peopleIcon from "../icons/peopleIcon.svg";
 import annaImg from "../images/anna.avif";
 import personOneImg from "../images/person1.avif";
 import personTwoImg from "../images/person2.avif";
@@ -121,19 +121,16 @@ export default function PostDetailPage() {
               className="participant-avatar"
             />
 
-            <div className="participant-count">+19</div>
-          </div>
+           <div className="participant-count">
+  <span>+19</span>
+</div>
           <div className="solo-box">
             <h4>12 deltager alene</h4>
 
             <div className="solo-text-row">
               <p>Perfekt mulighed for at møde nye mennesker!</p>
 
-              <img
-                src={twoPeopleIcon}
-                alt="People icon"
-                className="solo-icon"
-              />
+              <img src={peopleIcon} alt="People icon" className="solo-icon" />
             </div>
           </div>
           <button className="join-btn">Deltag</button>
