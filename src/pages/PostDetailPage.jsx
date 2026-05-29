@@ -60,8 +60,17 @@ export default function PostDetailPage() {
         </div>
         <div className="post-detail-body">
           <h1 className="post-detail-title">{post.title}</h1>
-          <p className="post-date">{post.date}</p>
-          <p className="post-location">{post.location}</p>
+          <div className="post-date-row">
+            <img src={calendarIcon} alt="calendar" className="detail-icon" />
+
+            <p className="post-date">{post.date}</p>
+          </div>
+
+          <div className="post-location-row">
+            <img src={locationIcon} alt="location" className="detail-icon" />
+
+            <p className="post-location">{post.location}</p>
+          </div>
           <h3 className="section-title">Om eventet</h3>
           <p className="event-description">
             Kom til en hyggelig dag, hvor vi maler keramik efter egen lyst. Der
