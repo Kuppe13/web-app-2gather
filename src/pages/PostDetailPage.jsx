@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import "./PostDetailPage.css";
 
@@ -7,7 +7,6 @@ import heartIcon from "../icons/heart-icon.svg";
 import shareIcon from "../icons/share-icon.svg";
 import calendarIcon from "../icons/uit_calender.svg";
 import locationIcon from "../icons/carbon_location.svg";
-import twoPeopleIcon from "../icons/twoPeople-icon.svg";
 import starIcon from "../icons/star-icon.svg";
 import peopleIcon from "../icons/peopleIcon.svg";
 import annaImg from "../images/anna.avif";
@@ -108,28 +107,24 @@ export default function PostDetailPage() {
               alt="Participant 1"
               className="participant-avatar"
             />
-
             <img
               src={personTwoImg}
               alt="Participant 2"
               className="participant-avatar"
             />
-
             <img
               src={personThreeImg}
               alt="Participant 3"
               className="participant-avatar"
             />
-
-           <div className="participant-count">
-  <span>+19</span>
-</div>
+            <div className="participant-count">
+              <span>+19</span>
+            </div>
+          </div>
           <div className="solo-box">
             <h4>12 deltager alene</h4>
-
             <div className="solo-text-row">
               <p>Perfekt mulighed for at møde nye mennesker!</p>
-
               <img src={peopleIcon} alt="People icon" className="solo-icon" />
             </div>
           </div>
