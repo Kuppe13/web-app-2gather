@@ -44,6 +44,14 @@ export default function PostDetailPage() {
     navigate("/");
   }
 
+  const formattedDate = post.date
+    ? new Date(post.date).toLocaleDateString("da-DK", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      })
+    : "";
+
   return (
     <main className="app">
       <article className="post-detail">
@@ -63,7 +71,9 @@ export default function PostDetailPage() {
           <div className="post-date-row">
             <img src={calendarIcon} alt="calendar" className="detail-icon" />
 
-            <p className="post-date">{post.date}</p>
+            <p className="post-date">
+              {formattedDate} • {post.time?.slice(0, 5)}
+            </p>
           </div>
 
           <div className="post-location-row">
@@ -72,22 +82,19 @@ export default function PostDetailPage() {
             <p className="post-location">{post.location}</p>
           </div>
           <h3 className="section-title">Om eventet</h3>
-          <p className="event-description">
-            Kom til en hyggelig dag, hvor vi maler keramik efter egen lyst. Der
-            vil blive serveret snacks og sodavand.
-          </p>
+          <p className="description">{post.description}</p>
           <h3 className="section-title">Arrangør</h3>
 
           <div className="organizer">
             <img src={annaImg} alt="Anna" className="organizer-avatar" />
 
             <div className="organizer-info">
-              <p className="organizer-name">Anna L.</p>
+              <p className="organizer_name">{post.organizer_name}</p>
 
               <p className="organizer-rating">⭐ 4.8 (12 events)</p>
             </div>
           </div>
-          <h3 className="section-title">Deltagere (22)</h3>
+          <h3 className="section-title participants-title">Deltagere (22)</h3>
 
           <div className="participants">
             <img
