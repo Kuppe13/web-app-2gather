@@ -1,11 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
+import "./PostDetailPage.css";
+
 import heartIcon from "../icons/heart-icon.svg";
 import shareIcon from "../icons/share-icon.svg";
 import calendarIcon from "../icons/uit_calender.svg";
 import locationIcon from "../icons/carbon_location.svg";
 import twoPeopleIcon from "../icons/twoPeople-icon.svg";
+import peopleIcon from "../icons/people-team-28-regular.svg";
+import annaImg from "../images/anna.avif";
+import personOneImg from "../images/person1.avif";
+import personTwoImg from "../images/person2.avif";
+import personThreeImg from "../images/person3.avif";
 
 const URL = import.meta.env.VITE_SUPABASE_URL;
 const headers = {
@@ -61,38 +68,51 @@ export default function PostDetailPage() {
             vil blive serveret snacks og sodavand.
           </p>
           <h3 className="section-title">Arrangør</h3>
+
           <div className="organizer">
-            <img
-              src="https://i.pravatar.cc/100?img=32"
-              alt="Anna"
-              className="organizer-avatar"
-            />
-            <p className="organizer-name">Anna L.</p>
-            <p className="organizer-rating">⭐ 4.8 (12 events)</p>
+            <img src={annaImg} alt="Anna" className="organizer-avatar" />
+
+            <div className="organizer-info">
+              <p className="organizer-name">Anna L.</p>
+
+              <p className="organizer-rating">⭐ 4.8 (12 events)</p>
+            </div>
           </div>
           <h3 className="section-title">Deltagere (22)</h3>
+
           <div className="participants">
             <img
-              src="https://i.pravatar.cc/100?img=12"
-              alt=""
+              src={personOneImg}
+              alt="Participant 1"
               className="participant-avatar"
             />
+
             <img
-              src="https://i.pravatar.cc/100?img=15"
-              alt=""
+              src={personTwoImg}
+              alt="Participant 2"
               className="participant-avatar"
             />
+
             <img
-              src="https://i.pravatar.cc/100?img=18"
-              alt=""
+              src={personThreeImg}
+              alt="Participant 3"
               className="participant-avatar"
             />
+
             <div className="participant-count">+19</div>
           </div>
           <div className="solo-box">
             <h4>12 deltager alene</h4>
 
-            <p>Perfekt mulighed for at møde nye mennesker!</p>
+            <div className="solo-text-row">
+              <p>Perfekt mulighed for at møde nye mennesker!</p>
+
+              <img
+                src={twoPeopleIcon}
+                alt="People icon"
+                className="solo-icon"
+              />
+            </div>
           </div>
           <button className="join-btn">Deltag</button>
         </div>
