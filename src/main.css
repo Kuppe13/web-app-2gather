@@ -62,7 +62,7 @@ main.app {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px 0em 5em;
+  padding: 0 0 5em;
   background-color: var(--bg-color);
 }
 

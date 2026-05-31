@@ -102,34 +102,24 @@ export default function PostDetailPage() {
           <h3 className="section-title participants-title">Deltagere (22)</h3>
 
           <div className="participants">
-            <img
-              src={personOneImg}
-              alt="Participant 1"
-              className="participant-avatar"
-            />
-            <img
-              src={personTwoImg}
-              alt="Participant 2"
-              className="participant-avatar"
-            />
-            <img
-              src={personThreeImg}
-              alt="Participant 3"
-              className="participant-avatar"
-            />
+            <img src={personOneImg} className="participant-avatar" />
+            <img src={personTwoImg} className="participant-avatar" />
+            <img src={personThreeImg} className="participant-avatar" />
 
             <div className="participant-count">
               <span>+19</span>
             </div>
-            <div className="solo-box">
-              <h4>12 deltager alene</h4>
+          </div>
 
-              <div className="solo-text-row">
-                <p>Perfekt mulighed for at møde nye mennesker!</p>
-
-                <img src={peopleIcon} alt="People icon" className="solo-icon" />
-              </div>
+          <div className="solo-box">
+            <h4>12 deltager alene</h4>
+            <div className="solo-text-row">
+              <p>Perfekt mulighed for at møde nye mennesker!</p>
+              <img src={peopleIcon} alt="People icon" className="solo-icon" />
             </div>
+          </div>
+
+          <div className="action-buttons">
             <button className="join-btn">Deltag</button>
             <button className="delete-btn" onClick={handleDelete}>
               Slet

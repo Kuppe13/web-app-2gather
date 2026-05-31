@@ -30,6 +30,10 @@ a.post-card {
   margin: 0 auto;
 }
 
+.feed-intro {
+  margin-top: 100px;
+}
+
 .page-title {
   font-family: var(--h2-font);
   font-size: 1.5em;
