@@ -5,6 +5,7 @@ import CreatePage from "./pages/CreatePage";
 import PostDetailPage from "./pages/PostDetailPage";
 import UpdatePage from "./pages/UpdatePage";
 import ProfilePage from "./pages/ProfilePage";
+import EditProfilePage from "./pages/EditProfilePage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/posts/:id" element={<PostDetailPage />} />
         <Route path="/posts/:id/update" element={<UpdatePage />} />
         <Route path="/profile/:id" element={<ProfilePage />} />
+        <Route path="/profile/:id/edit" element={<EditProfilePage />} />
       </Routes>
     </>
   );
