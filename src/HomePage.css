@@ -7,7 +7,22 @@ a.post-card {
 .site-header {
   background-color: var(--Indigo);
   position: fixed;
-  z-index: 100;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 390px;
+  height: 80px;
+  z-index: 9999;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.top-banner-logo {
+  background-color: var(--Indigo);
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .app {
@@ -19,22 +34,27 @@ a.post-card {
   font-family: var(--h2-font);
   font-size: 1.5em;
   line-height: 0.5em;
+  padding: 0 0 0 16px;
 }
 .front-page-text {
   font-family: var(--body-font);
   font-size: 1rem;
   margin-bottom: 0.1em;
+  padding: 0 0 0 16px;
 }
 
 .feed-section-one {
   font-family: var(--body-font);
   font-size: 0.85rem;
   margin-top: 0.1em;
+  margin-bottom: 0;
+  padding: 0 0 0 16px;
 }
 
 .post-grid {
   display: grid;
   grid-template-columns: 1fr 1fr (minmax(200px, 1fr));
+  padding: 1em;
   gap: 1em;
 }
 

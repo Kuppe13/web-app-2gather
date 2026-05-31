@@ -1,12 +1,12 @@
 .post-detail {
-  width: 390px;
-  min-height: 844px;
+  width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   background: var(--bg-color);
   overflow: hidden;
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .image-wrapper img {

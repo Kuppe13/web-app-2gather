@@ -16,10 +16,7 @@ body {
   margin: 0;
   min-width: 390px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: block;
   overflow-y: scroll;
   background-color: var(--bg-color);
 }
@@ -65,7 +62,7 @@ main.app {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 130px 2em 6em;
+  padding: 100px 0em 5em;
   background-color: var(--bg-color);
 }
 
@@ -73,14 +70,6 @@ a {
   color: var(--green);
   text-decoration: none;
   transition: 0.5s;
-}
-
-.post-form,
-.post-card,
-.post-detail {
-  background-color: var(--silky-white);
-  box-shadow: var(--shadow-card);
-  animation: fadeIn 0.5s;
 }
 
 .btn {
@@ -140,7 +129,7 @@ a {
 /* Navigation */
 nav {
   background-color: var(--bg-color);
-  padding: 1rem 1rem;
+  padding: 16px;
   box-shadow: 0 0 0 1px var(--Light-grey);
   display: flex;
   justify-content: center;
@@ -243,59 +232,13 @@ nav {
   margin-top: 0.25em;
 }
 
-.post-detail {
-  padding: 1.5em;
-  transition: 0.5s;
-  border-radius: 10px;
-  display: grid;
-  grid-template-columns: minmax(280px, 1.2fr) minmax(0, 1fr);
-  gap: 1.5em;
-  align-items: start;
-}
-
-.post-detail img {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-  border-radius: 10px;
-  
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.post-detail-body {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.post-meta {
-  margin: 0;
-  color: var(--dark-green);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.post-detail-caption {
-  margin: 0;
-  font-size: 1.15rem;
-  line-height: 1.6;
-}
-
-.post-detail-actions {
-  display: flex;
-  gap: 0.5em;
-}
-
 @media (min-width: 390px) {
   .post-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 390px) {
   .post-detail {
     grid-template-columns: 1fr 1fr;
   }
@@ -304,10 +247,6 @@ nav {
 @media (max-width: 390px) {
   .app {
     padding: 120px 1em 1em;
-  }
-
-  .site-header {
-    padding: 1em;
   }
 
   .site-nav {
