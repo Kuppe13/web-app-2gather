@@ -14,7 +14,7 @@ export default function NavBar() {
       <NavLink to="/favorites">
         <img src={heartIcon1} alt="Heart icon" />
       </NavLink>
-      <NavLink to="/createPost">
+      <NavLink to="/createPage">
         <img src={plusIcon} alt="Plus icon" />
       </NavLink>
       <NavLink to="/chat">

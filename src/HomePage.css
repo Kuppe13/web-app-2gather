@@ -34,7 +34,7 @@ a.post-card {
 
 .post-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr (minmax(200px, 1fr));
   gap: 1em;
 }
 

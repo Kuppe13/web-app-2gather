@@ -1,5 +1,3 @@
-// HUS IKON I NAVBAR
-
 import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard";
 import Header from "../components/Header";
@@ -8,7 +6,7 @@ import "../HomePage.css";
 const URL = import.meta.env.VITE_SUPABASE_URL;
 const APIKEY = import.meta.env.VITE_SUPABASE_APIKEY;
 
-export default function HomePage() {
+export default function FavoritesPage() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -31,9 +29,7 @@ export default function HomePage() {
       <Header />
       <main className="app">
         <section className="feed-intro">
-          <h2 className="page-title">Halløjsovs!</h2>
-          <p className="front-page-text">Velkommen tilbage!</p>
-          <p className="feed-section-one">Udforsk events i nærheden af dig!</p>
+          <h2 className="page-title">Dine gemte events!!</h2>
         </section>
 
         <section className="post-grid">
