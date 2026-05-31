@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard";
+import "./HomePage.css";
 
 const URL = import.meta.env.VITE_SUPABASE_URL;
 const APIKEY = import.meta.env.VITE_SUPABASE_APIKEY;

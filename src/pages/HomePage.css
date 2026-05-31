@@ -1,0 +1,76 @@
+/* Home Page Styles */
+
+a.post-card {
+  background-color: var(--Light-grey);
+}
+
+.app {
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 130px 2em 2em;
+}
+
+.page-title {
+  font-family: var(--h2-font);
+  font-size: 1.5em;
+  line-height: 1.1;
+  margin: 0 0 0.9em;
+}
+
+.feed-intro {
+  margin-bottom: 1.5em;
+}
+
+.feed-eyebrow {
+  color: var(--Indigo);
+  font-family: var(--h2-font);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 0.5em;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+.post-card {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.post-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.post-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1em;
+  color: var(--bg-color);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  font-size: 0.5rem;
+  line-height: 1.35;
+}
+
+.post-card-id {
+  margin: 0;
+  color: var(--dark-green);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
