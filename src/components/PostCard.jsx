@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
+import heartIcon1 from "../icons/heart-icon1.svg";
 
 export default function PostCard({ post }) {
   return (
     <Link to={`/posts/${post.id}`} className="post-card">
       <img src={post.image} alt={post.caption} />
       <div className="post-card-body">
+        <div className="post-card-header">
+          <button className="like-btn">
+            <img src={heartIcon1} alt="favorite" />
+          </button>
+        </div>
         <div className="post-card-title">
           <div id={post.title}></div>
         </div>

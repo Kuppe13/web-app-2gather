@@ -70,6 +70,33 @@ a.post-card {
   border-radius: 10px;
 }
 
+.post-card-header {
+  position: absolute;
+  right: 10px;
+  bottom: 180px;
+  display: flex;
+  z-index: 10;
+}
+
+.like-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  overflow: visible;
+}
+
+.like-btn img {
+  display: block;
+  width: 24px !important;
+  height: 24px !important;
+}
+
 .post-card img {
   width: 100%;
   height: 220px;
