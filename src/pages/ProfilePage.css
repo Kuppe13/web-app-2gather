@@ -8,12 +8,12 @@
 }
 .profile-page {
   padding-top: 140px;
-  padding-left: 40px;
-}
 
-.profile-page {
-  padding-top: 140px;
-  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
 }
 
 .profile-card {
@@ -47,13 +47,14 @@
 
 .about-card {
   background: #f4f1e8;
-  width: 350px;
+  width: 500px;
   padding: 20px;
   border-radius: 20px;
   margin-top: 20px;
 }
 .profile-info {
-  display: contents;
+  display: flex;
+  flex-direction: column;
 }
 .profile-stats {
   grid-column: 2;
@@ -78,5 +79,22 @@
 }
 
 .profile-info p {
-  margin: 0;
+  margin: 4px 0 0 0;
+}
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-info h2 {
+  margin: 8px 0 0 0;
+}
+
+.profile-info p {
+  margin: 4px 0 0 0;
 }
