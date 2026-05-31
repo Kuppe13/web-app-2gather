@@ -313,7 +313,7 @@ a:hover {
 
 @media (max-width: 991px) {
   .post-detail {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

@@ -59,18 +59,9 @@ a.post-card {
   width: 100%;
   padding: 1em;
   color: var(--bg-color);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
-  font-weight: 500;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  font-weight: 400;
   letter-spacing: 0.1px;
   font-size: 0.5rem;
-  line-height: 1.35;
-}
-
-.post-card-id {
-  margin: 0;
-  color: var(--dark-green);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  line-height: 0.7;
 }
