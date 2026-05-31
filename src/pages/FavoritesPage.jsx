@@ -29,7 +29,7 @@ export default function FavoritesPage() {
       <Header />
       <main className="app">
         <section className="feed-intro">
-          <h2 className="page-title">Dine gemte events!!</h2>
+          <h2 className="page-title">Dine gemte events</h2>
         </section>
 
         <section className="post-grid">

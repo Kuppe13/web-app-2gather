@@ -1,23 +1,11 @@
 // CHAT BOBLER IKONER I NAVBAR
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import NavBar from "../components/NavBar";
 import "../chat.css";
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
-
-  useEffect(() => {
-    // Simulerer indkommende beskeder
-    const interval = setInterval(() => {
-      setMessages((prev) => [
-        ...prev,
-        { id: Date.now(), text: "Ny besked fra en ven!" },
-      ]);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   function handleSend() {
     if (input.trim() === "") return;
