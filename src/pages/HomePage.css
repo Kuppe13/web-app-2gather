@@ -4,6 +4,12 @@ a.post-card {
   background-color: var(--Light-grey);
 }
 
+.site-header {
+  background-color: var(--Indigo);
+  position: fixed;
+  z-index: 100;
+}
+
 .app {
   max-width: 390px;
   margin: 0 auto;

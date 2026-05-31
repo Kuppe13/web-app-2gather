@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard";
+import Header from "../components/Header";
 import "./HomePage.css";
 
 const URL = import.meta.env.VITE_SUPABASE_URL;
@@ -24,18 +25,21 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main className="app">
-      <section className="feed-intro">
-        <p className="feed-eyebrow">2GATHER</p>
-        <h1 className="page-title">Find dit næste event her!</h1>
-      </section>
+    <>
+      <Header />
+      <main className="app">
+        <section className="feed-intro">
+          <h2 className="page-title">Udforsk events i Aarhus!</h2>
+          <p className="feed-section-one">Events i nærheden</p>
+        </section>
 
-      <section className="post-grid">
-        {posts.map((post) => (
-          <PostCard key={post.id} post={post} />
-        ))}
-      </section>
-    </main>
+        <section className="post-grid">
+          {posts.map((post) => (
+            <PostCard key={post.id} post={post} />
+          ))}
+        </section>
+      </main>
+    </>
   );
 }
 
