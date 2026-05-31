@@ -13,28 +13,23 @@ a.post-card {
 .app {
   max-width: 390px;
   margin: 0 auto;
-  padding: 130px 2em 2em;
 }
 
 .page-title {
   font-family: var(--h2-font);
   font-size: 1.5em;
-  line-height: 1.1;
-  margin: 0 0 0.9em;
+  line-height: 0.5em;
+}
+.front-page-text {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  margin-bottom: 0.1em;
 }
 
-.feed-intro {
-  margin-bottom: 1.5em;
-}
-
-.feed-eyebrow {
-  color: var(--Indigo);
-  font-family: var(--h2-font);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 0 0 0.5em;
+.feed-section-one {
+  font-family: var(--body-font);
+  font-size: 0.85rem;
+  margin-top: 0.1em;
 }
 
 .post-grid {
@@ -68,6 +63,6 @@ a.post-card {
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   font-weight: 400;
   letter-spacing: 0.1px;
-  font-size: 0.5rem;
-  line-height: 0.7;
+  font-size: 0.6rem;
+  line-height: 0.5;
 }

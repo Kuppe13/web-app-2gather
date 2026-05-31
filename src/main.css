@@ -31,7 +31,7 @@ html {
 h1 {
   font-family: var(--h1-font);
   font-size: 3.5em;
-  line-height: 1.1;
+  line-height: 1;
   margin: 0 0 0.5em;
 }
 
@@ -50,7 +50,7 @@ h2 {
 
 body,
 html {
-  background-color: var(--bg-color);
+  background-color: var(--Light-grey);
   color: var(--Indigo);
   font-family: var(--body-font);
   font-weight: 400;
@@ -60,14 +60,19 @@ html {
   padding: 0;
 }
 
+main.app {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 130px 2em 6em;
+  background-color: var(--bg-color);
+}
+
 a {
   color: var(--green);
   text-decoration: none;
   transition: 0.5s;
-}
-
-a:hover {
-  color: var(--dark-green);
 }
 
 .post-form,
@@ -134,12 +139,12 @@ a:hover {
 
 /* Navigation */
 nav {
-  background-color: #80b638;
+  background-color: var(--bg-color);
   padding: 1rem 1rem;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0);
+  box-shadow: 0 0 0 1px var(--Light-grey);
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 3rem;
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -148,27 +153,6 @@ nav {
   max-width: 390px;
   box-sizing: border-box;
   z-index: 100;
-}
-
-.nav-link {
-  display: inline-block;
-  color: var(--text-color-light);
-  text-align: center;
-  padding: 20px 16px;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border: 2px solid var(--green);
-  font-weight: 500;
-  font-size: 1.2em;
-  border-radius: 8px;
-  transition: 0.5s;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  background-color: var(--light-green);
-  color: var(--green);
 }
 
 .post-form {
