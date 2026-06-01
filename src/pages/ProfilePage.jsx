@@ -67,7 +67,7 @@ export default function ProfilePage() {
 
             <div className="profile-description">
               <p>
-                <strong>Beskrivelse:</strong> {user.Beskrivelse}
+                <strong>Om mig:</strong> {user.Beskrivelse}
               </p>
             </div>
           </>
