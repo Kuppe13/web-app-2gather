@@ -12,7 +12,7 @@ const headers = {
 export default function CreatePage() {
   const navigate = useNavigate();
   const [image, setImage] = useState("");
-  const [caption, setCaption] = useState("");
+  const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const [location, setLocation] = useState("");
 
@@ -24,7 +24,7 @@ export default function CreatePage() {
       headers,
       body: JSON.stringify({
         image: image.trim(),
-        caption: caption.trim(),
+        title: title.trim(),
         date: date.trim(),
         location: location.trim(),
       }),
