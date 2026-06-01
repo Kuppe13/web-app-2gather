@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./CreatePage.css";
+import "./Createpage.css";
 
 const URL = import.meta.env.VITE_SUPABASE_URL;
 const headers = {
@@ -46,7 +46,7 @@ export default function CreatePage() {
   }
 
   return (
-    <main className="app">
+    <main className="app create-page">
       <h1 className="page-title">Opret begivenhed</h1>
       <form className="post-form" onSubmit={handleSubmit}>
         <div className="form-grid">
