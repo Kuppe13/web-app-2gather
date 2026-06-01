@@ -14,7 +14,10 @@ export default function CreatePage() {
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
+  const [startTime, setStartTime] = useState("");
+  const [endTime, setEndTime] = useState("");
   const [location, setLocation] = useState("");
+  const [organizerName, setOrganizerName] = useState("");
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -26,14 +29,16 @@ export default function CreatePage() {
         image: image.trim(),
         title: title.trim(),
         date: date.trim(),
+        start_time: startTime.trim(),
+        end_time: endTime.trim(),
         location: location.trim(),
+        organizer_name: organizerName.trim(),
       }),
     });
 
-    const data = await response.json();
-
-    console.log("Response:", data);
-
+    console.log("Status:", response.status);
+    console.log("Success:", response.ok);
+   
     if (response.ok) {
       navigate("/");
     }
@@ -41,11 +46,11 @@ export default function CreatePage() {
 
   return (
     <main className="app">
-      <h1 className="page-title">Create Post</h1>
+      <h1 className="page-title">Opret begivenhed</h1>
       <form className="post-form" onSubmit={handleSubmit}>
         <div className="form-grid">
           <div className="form-field">
-            <label htmlFor="image">Image URL</label>
+            <label htmlFor="image">Event billede</label>
             <input
               id="image"
               name="image"
@@ -60,12 +65,12 @@ export default function CreatePage() {
           </div>
 
           <div className="form-field">
-            <label htmlFor="title">Titel</label>
+            <label htmlFor="title">Titel på event</label>
             <textarea
-              id="caption"
-              name="caption"
+              id="title"
+              name="title"
               rows="4"
-              placeholder="Skriv en titel til dit event..."
+              placeholder="Indtast event navn"
               value={title}
               onChange={(event) => setTitle(event.target.value)}
               required
@@ -73,7 +78,7 @@ export default function CreatePage() {
           </div>
 
           <div className="form-field">
-            <label htmlFor="date">Date</label>
+            <label htmlFor="date">Dato</label>
             <input
               type="date"
               id="date"
@@ -85,7 +90,28 @@ export default function CreatePage() {
           </div>
 
           <div className="form-field">
-            <label htmlFor="location">Location</label>
+            <label htmlFor="startTime">Starttid</label>
+            <input
+              type="time"
+              id="startTime"
+              value={startTime}
+              onChange={(event) => setStartTime(event.target.value)}
+              required
+            />
+          </div>
+
+          <div className="form-field">
+            <label htmlFor="endTime">Sluttid</label>
+            <input
+              type="time"
+              id="endTime"
+              value={endTime}
+              onChange={(event) => setEndTime(event.target.value)}
+            />
+          </div>
+
+          <div className="form-field">
+            <label htmlFor="location">Lokation</label>
             <input
               id="location"
               name="location"
@@ -95,6 +121,16 @@ export default function CreatePage() {
               required
             />
           </div>
+        </div>
+
+        <div className="form-field">
+          <label htmlFor="organizer">Arrangør</label>
+          <input
+            id="organizer"
+            value={organizerName}
+            onChange={(event) => setOrganizerName(event.target.value)}
+            required
+          />
         </div>
 
         <div className="form-actions">
