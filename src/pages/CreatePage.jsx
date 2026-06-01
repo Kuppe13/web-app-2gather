@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./CreatePage.css";
 
 const URL = import.meta.env.VITE_SUPABASE_URL;
 const headers = {
@@ -134,8 +135,8 @@ export default function CreatePage() {
         </div>
 
         <div className="form-actions">
-          <button type="submit" className="btn btn-primary">
-            Gem event
+          <button type="submit" className="create-btn">
+            Opret begivenhed
           </button>
         </div>
       </form>
