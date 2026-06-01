@@ -22,6 +22,8 @@
   object-fit: cover;
 
   border: 0.5px solid var(--text-color);
+  margin: 0 auto 24px auto;
+  display: block;
 }
 
 .profile-container {
