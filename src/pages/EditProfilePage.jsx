@@ -7,7 +7,7 @@ export default function EditProfilePage() {
     localStorage.getItem("profileName") || "Kübra",
   );
   const [username, setUsername] = useState(
-    localStorage.getItem("profileUsername") || "@kubrafidan",
+    localStorage.getItem("profileUsername") || "kubrafidan",
   );
   const [about, setAbout] = useState(
     localStorage.getItem("profileAbout") ||
