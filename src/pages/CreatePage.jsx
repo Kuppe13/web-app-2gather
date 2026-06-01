@@ -19,7 +19,7 @@ export default function CreatePage() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    await fetch(URL, {
+    const response = await fetch(URL, {
       method: "POST",
       headers,
       body: JSON.stringify({
@@ -30,7 +30,13 @@ export default function CreatePage() {
       }),
     });
 
-    navigate("/");
+    const data = await response.json();
+
+    console.log("Response:", data);
+
+    if (response.ok) {
+      navigate("/");
+    }
   }
 
   return (
@@ -54,14 +60,14 @@ export default function CreatePage() {
           </div>
 
           <div className="form-field">
-            <label htmlFor="caption">Titel</label>
+            <label htmlFor="title">Titel</label>
             <textarea
               id="caption"
               name="caption"
               rows="4"
               placeholder="Skriv en titel til dit event..."
-              value={caption}
-              onChange={(event) => setCaption(event.target.value)}
+              value={title}
+              onChange={(event) => setTitle(event.target.value)}
               required
             />
           </div>
@@ -69,25 +75,26 @@ export default function CreatePage() {
           <div className="form-field">
             <label htmlFor="date">Date</label>
             <input
+              type="date"
               id="date"
               name="date"
-              placeholder="Hvornår foregår dit event?"
               value={date}
               onChange={(event) => setDate(event.target.value)}
               required
             />
           </div>
 
-          < className="form-field">
-          <label htmlFor="location">Location</label>
-          <input
-            id="location"
-            name="location"
-            placeholder="Hvor foregår dit event?"
-            value={location}
-            onChange={(event) => setLocation(event.target.value)}
-            required
-          />
+          <div className="form-field">
+            <label htmlFor="location">Location</label>
+            <input
+              id="location"
+              name="location"
+              placeholder="Hvor foregår dit event?"
+              value={location}
+              onChange={(event) => setLocation(event.target.value)}
+              required
+            />
+          </div>
         </div>
 
         <div className="form-actions">
