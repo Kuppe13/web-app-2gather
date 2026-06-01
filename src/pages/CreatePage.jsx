@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Createpage.css";
 
 const URL = import.meta.env.VITE_SUPABASE_URL;
 const headers = {
@@ -12,34 +13,48 @@ const headers = {
 export default function CreatePage() {
   const navigate = useNavigate();
   const [image, setImage] = useState("");
-  const [caption, setCaption] = useState("");
+  const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
+  const [startTime, setStartTime] = useState("");
+  const [endTime, setEndTime] = useState("");
   const [location, setLocation] = useState("");
+  const [organizerName, setOrganizerName] = useState("");
 
   async function handleSubmit(event) {
     event.preventDefault();
 
-    await fetch(URL, {
+    const response = await fetch(URL, {
       method: "POST",
       headers,
       body: JSON.stringify({
         image: image.trim(),
-        caption: caption.trim(),
+        title: title.trim(),
         date: date.trim(),
+        start_time: startTime.trim(),
+        end_time: endTime.trim(),
         location: location.trim(),
+        organizer_name: organizerName.trim(),
       }),
     });
 
-    navigate("/");
+    console.log("Status:", response.status);
+    console.log("Success:", response.ok);
+   
+    if (response.ok) {
+      navigate("/");
+    }
   }
 
   return (
-    <main className="app">
-      <h1 className="page-title">Create Post</h1>
+    <main className="app create-page">
+      <h1 className="page-title">Opret begivenhed</h1>
+      <p className="page-subtitle">
+        Udfyld informationerne forneden
+      </p>
       <form className="post-form" onSubmit={handleSubmit}>
         <div className="form-grid">
           <div className="form-field">
-            <label htmlFor="image">Image URL</label>
+            <label htmlFor="image">Event billede</label>
             <input
               id="image"
               name="image"
@@ -54,44 +69,77 @@ export default function CreatePage() {
           </div>
 
           <div className="form-field">
-            <label htmlFor="caption">Titel</label>
+            <label htmlFor="title">Titel på event</label>
             <textarea
-              id="caption"
-              name="caption"
+              id="title"
+              name="title"
               rows="4"
-              placeholder="Skriv en titel til dit event..."
-              value={caption}
-              onChange={(event) => setCaption(event.target.value)}
+              placeholder="Indtast event navn"
+              value={title}
+              onChange={(event) => setTitle(event.target.value)}
               required
             />
           </div>
 
-          <div className="form-field"></div>
-          <label htmlFor="date">Date</label>
-          <input
-            id="date"
-            name="date"
-            placeholder="Hvornår foregår dit event?"
-            value={date}
-            onChange={(event) => setDate(event.target.value)}
-            required
-          />
+          <div className="form-field">
+            <label htmlFor="date">Dato</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              value={date}
+              onChange={(event) => setDate(event.target.value)}
+              required
+            />
+          </div>
 
-          <div className="form-field"></div>
-          <label htmlFor="location">Location</label>
+          <div className="form-field">
+            <label htmlFor="startTime">Starttid</label>
+            <input
+              type="time"
+              id="startTime"
+              value={startTime}
+              onChange={(event) => setStartTime(event.target.value)}
+              required
+            />
+          </div>
+
+          <div className="form-field">
+            <label htmlFor="endTime">Sluttid</label>
+            <input
+              type="time"
+              id="endTime"
+              value={endTime}
+              onChange={(event) => setEndTime(event.target.value)}
+            />
+          </div>
+
+          <div className="form-field">
+            <label htmlFor="location">Lokation</label>
+            <input
+              id="location"
+              name="location"
+              placeholder="Hvor foregår dit event?"
+              value={location}
+              onChange={(event) => setLocation(event.target.value)}
+              required
+            />
+          </div>
+        </div>
+
+        <div className="form-field">
+          <label htmlFor="organizer">Arrangør</label>
           <input
-            id="location"
-            name="location"
-            placeholder="Hvor foregår dit event?"
-            value={location}
-            onChange={(event) => setLocation(event.target.value)}
+            id="organizer"
+            value={organizerName}
+            onChange={(event) => setOrganizerName(event.target.value)}
             required
           />
         </div>
 
         <div className="form-actions">
-          <button type="submit" className="btn btn-primary">
-            Gem event
+          <button type="submit" className="create-btn">
+            Opret begivenhed
           </button>
         </div>
       </form>

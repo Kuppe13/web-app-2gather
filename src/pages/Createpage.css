@@ -1,0 +1,25 @@
+.create-page .form-field input,
+.create-page .form-field textarea {
+  border-radius: 14px;
+  background-color: var(--Silky-white);
+  font-family: var(--body-font);
+}
+
+.create-btn {
+  width: 100%;
+  height: 44px;
+  background: var(--Pang-orange);
+  color: var (--Indigo);
+  border: 1px solid var(--Indigo);
+  border-radius: 14px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+.page-subtitle {
+  padding-left: 1.1rem;
+  margin-top: 0rem;
+  font-family: var(--body-font);
+}
