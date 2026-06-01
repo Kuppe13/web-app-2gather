@@ -48,6 +48,9 @@ export default function CreatePage() {
   return (
     <main className="app create-page">
       <h1 className="page-title">Opret begivenhed</h1>
+      <p className="page-subtitle">
+        Udfyld informationerne forneden
+      </p>
       <form className="post-form" onSubmit={handleSubmit}>
         <div className="form-grid">
           <div className="form-field">

@@ -2,6 +2,7 @@
 .create-page .form-field textarea {
   border-radius: 14px;
   background-color: var(--Silky-white);
+  font-family: var(--body-font);
 }
 
 .create-btn {
@@ -14,4 +15,11 @@
   font-size: 24px;
   font-weight: 700;
   cursor: pointer;
+}
+
+
+.page-subtitle {
+  padding-left: 1.1rem;
+  margin-top: 0rem;
+  font-family: var(--body-font);
 }
