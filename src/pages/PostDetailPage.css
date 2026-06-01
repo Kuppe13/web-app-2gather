@@ -290,6 +290,19 @@
   margin-top: 16px;
 }
 
+.edit-btn {
+  width: 274px;
+  height: 40px;
+  background: var(--Light-grey);
+  border: 2px solid var(--Indigo);
+  border-radius: 12px;
+  font-family: var(--h2-font);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--Indigo);
+  cursor: pointer;
+}
+
 .delete-btn {
   width: 274px;
   height: 40px;
