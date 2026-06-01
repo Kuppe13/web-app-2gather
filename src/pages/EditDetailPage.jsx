@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import "../EditDetailPage.css";
 
 const URL = import.meta.env.VITE_SUPABASE_URL;
 const headers = {
