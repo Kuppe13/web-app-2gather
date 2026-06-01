@@ -121,6 +121,12 @@ export default function PostDetailPage() {
 
           <div className="action-buttons">
             <button className="join-btn">Deltag</button>
+            <button
+              className="edit-btn"
+              onClick={() => navigate(`/edit/${id}`)}
+            >
+              Rediger
+            </button>
             <button className="delete-btn" onClick={handleDelete}>
               Slet
             </button>

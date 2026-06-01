@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import profileImage from "../images/pb.avif";
 import "./EditProfilePage.css";
+import "../profile.css";
 
 export default function EditProfilePage() {
   const navigate = useNavigate();

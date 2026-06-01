@@ -290,15 +290,28 @@
   margin-top: 16px;
 }
 
-.delete-btn {
+.edit-btn {
   width: 274px;
   height: 40px;
-  background: var(--Light-grey);
+  background: var(--Pang-orange);
   border: 2px solid var(--Indigo);
   border-radius: 12px;
   font-family: var(--h2-font);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--Indigo);
+  cursor: pointer;
+}
+
+.delete-btn {
+  width: 274px;
+  height: 40px;
+  background: #fce9e9;
+  border: 2px solid var(--Red);
+  border-radius: 12px;
+  font-family: var(--h2-font);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--Red);
   cursor: pointer;
 }
