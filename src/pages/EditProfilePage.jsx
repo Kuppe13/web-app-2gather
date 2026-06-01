@@ -24,7 +24,7 @@ export default function EditProfilePage() {
 
   return (
     <main className="app">
-      <h1 className="page-title">Rediger profil</h1>
+      <h1 className="page-title edit-profile-page-title">Rediger profil</h1>
 
       <form className="post-form" onSubmit={handleSubmit}>
         <div className="form-field">
