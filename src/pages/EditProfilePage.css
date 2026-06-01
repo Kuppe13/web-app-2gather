@@ -1,0 +1,78 @@
+.edit-profile-page {
+  padding: 24px;
+}
+
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-card {
+  background: #f4f1e8;
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+}
+
+.edit-profile-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.change-photo-btn {
+  margin-top: 16px;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.form-field input,
+.form-field textarea {
+  border: none;
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  font-size: 18px;
+}
+
+.form-field textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+.save-btn {
+  background: #f8ad1d;
+  color: #000;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 16px;
+  border-radius: 999px;
+  border: 2px solid #22284a;
+  box-shadow: 4px 4px 0 #22284a;
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.form-actions button {
+  cursor: pointer;
+}
