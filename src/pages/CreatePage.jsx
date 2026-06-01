@@ -66,18 +66,19 @@ export default function CreatePage() {
             />
           </div>
 
-          <div className="form-field"></div>
-          <label htmlFor="date">Date</label>
-          <input
-            id="date"
-            name="date"
-            placeholder="Hvornår foregår dit event?"
-            value={date}
-            onChange={(event) => setDate(event.target.value)}
-            required
-          />
+          <div className="form-field">
+            <label htmlFor="date">Date</label>
+            <input
+              id="date"
+              name="date"
+              placeholder="Hvornår foregår dit event?"
+              value={date}
+              onChange={(event) => setDate(event.target.value)}
+              required
+            />
+          </div>
 
-          <div className="form-field"></div>
+          < className="form-field">
           <label htmlFor="location">Location</label>
           <input
             id="location"
