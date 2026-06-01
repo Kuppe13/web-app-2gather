@@ -35,9 +35,9 @@
   padding: 24px;
   margin: 0 auto 24px auto;
 
-  background: #f4f1e8;
+  background: #f7f3e7;
 
-  border: 1px solid #22284a;
+  border: 1px solid #d9d9d9;
   border-radius: 24px;
 }
 .profile-left {
@@ -87,9 +87,9 @@
 .edit-btn {
   margin-top: 12px;
 
-  background: #f8ad1d;
+  background: #ff981a;
 
-  color: black;
+  color: #212844;
   text-decoration: none;
 
   font-weight: 700;
@@ -105,7 +105,7 @@
 }
 
 .btn.btn-primary {
-  background: #f8ad1d;
+  background: #ff981a;
 
   color: black;
   text-decoration: none;
@@ -130,7 +130,7 @@
 
   background: white;
 
-  border: 1px solid #22284a;
+  border: 1px solid #d9d9d9;
   border-radius: 24px;
 
   padding: 24px;
