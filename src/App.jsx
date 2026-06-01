@@ -7,6 +7,7 @@ import UpdatePage from "./pages/UpdatePage";
 import FavoritesPage from "./pages/FavoritesPage";
 import ChatPage from "./pages/ChatPage";
 import ProfilePage from "./pages/ProfilePage";
+import EditProfilePage from "./pages/EditProfilePage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/chat" element={<ChatPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/profile/edit" element={<EditProfilePage />} />
       </Routes>
     </>
   );
