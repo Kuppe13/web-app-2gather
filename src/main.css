@@ -179,8 +179,9 @@ nav {
   font-size: 1rem;
   font-family: inherit;
   line-height: 1.5;
-  border-radius: 8px;
+  border-radius: 14px;
   border: 2px solid var(--Light-grey);
+  background-color: var(--Silky-white);
 }
 
 .form-field input::placeholder,
@@ -191,7 +192,7 @@ nav {
 .form-field input:focus,
 .form-field textarea:focus {
   outline: none;
-  border-color: rgba(38, 76, 89, 0.35);
+  border-color: var(--Light-grey);
   box-shadow:
     0 0 0 4px rgba(172, 198, 201, 0.35),
     0 10px 20px rgba(38, 76, 89, 0.08);
