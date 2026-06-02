@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import profileImage from "../images/pb.avif";
 import "./EditProfilePage.css";
-import "../profile.css";
 
 export default function EditProfilePage() {
   const navigate = useNavigate();
@@ -31,11 +30,7 @@ export default function EditProfilePage() {
     <main className="app">
       <h1 className="page-title edit-profile-page-title">Rediger profil</h1>
 
-      <img
-        src={profileImage}
-        alt="profile"
-        className="profile-icon"
-      />
+      <img src={profileImage} alt="profile" className="profile-icon" />
 
       <form className="edit-profile-form" onSubmit={handleSubmit}>
         <div className="form-field">
