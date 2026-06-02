@@ -41,7 +41,6 @@ export default function CreatePage() {
 
     console.log("Status:", response.status);
     console.log("Success:", response.ok);
-   
     if (response.ok) {
 setShowConfirmation(true);
     }

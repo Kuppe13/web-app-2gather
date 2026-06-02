@@ -2,6 +2,14 @@ import { Link } from "react-router-dom";
 import heartIcon1 from "../icons/heart-icon1.svg";
 
 export default function PostCard({ post }) {
+  const locationParts = (post.location || "")
+    .split(",")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  const streetLine = locationParts[0] || post.location || "";
+  const cityLine = locationParts.slice(1).join(", ");
+
   return (
     <Link to={`/posts/${post.id}`} className="post-card">
       <img src={post.image} alt={post.caption} />
@@ -18,7 +26,12 @@ export default function PostCard({ post }) {
         <h2>{post.title}</h2>
         <p className="post-card-date">{post.date}</p>
         <p className="post-card-time">{post.time}</p>
-        <p className="post-card-location">{post.location}</p>
+        <p className="post-card-location">
+          <span className="post-card-location-line">{streetLine}</span>
+          {cityLine ? (
+            <span className="post-card-location-line">{cityLine}</span>
+          ) : null}
+        </p>
       </div>
     </Link>
   );
