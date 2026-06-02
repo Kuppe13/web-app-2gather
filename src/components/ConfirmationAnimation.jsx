@@ -29,4 +29,5 @@ return (
       <Lottie animationData={confirmationAnimation} loop={false} />
     </div>
   </div>
-);
+    );
+}
