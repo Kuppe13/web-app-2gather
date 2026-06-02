@@ -39,9 +39,10 @@ export default function CreatePage() {
 
     console.log("Status:", response.status);
     console.log("Success:", response.ok);
-   
     if (response.ok) {
       navigate("/");
+    } else {
+      alert("Eventet kunne ikke oprettes. Prøv igen.");
     }
   }
 
