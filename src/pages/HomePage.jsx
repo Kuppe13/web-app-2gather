@@ -55,17 +55,17 @@ export default function HomePage() {
     <>
       <Header />
       <main className="app">
+        <section className="feed-intro">
+          <h2 className="page-title">Hej Kübra!</h2>
+          <p className="front-page-text">Velkommen tilbage!</p>
+          <p className="feed-section-one">Udforsk events i nærheden af dig!</p>
+        </section>
+
         <FilterBar
           options={categoryOptions}
           active={activeFilter}
           onSelect={setActiveFilter}
         />
-
-        <section className="feed-intro">
-          <h2 className="page-title">Halløjsovs!</h2>
-          <p className="front-page-text">Velkommen tilbage!</p>
-          <p className="feed-section-one">Udforsk events i nærheden af dig!</p>
-        </section>
 
         <section className="post-grid">
           {visiblePosts.map((post) => (

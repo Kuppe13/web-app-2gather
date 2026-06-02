@@ -32,6 +32,7 @@ a.post-card {
 
 .feed-intro {
   margin-top: 84px;
+  margin-bottom: 0.5em;
 }
 
 .page-title {
@@ -61,13 +62,12 @@ a.post-card {
   display: flex;
   gap: 0.5rem;
   padding: 0.5rem;
-  padding-bottom: 0.7rem;
+  padding-bottom: 0.5rem;
   overflow-x: auto;
-  background: var(--bg-color);
+  background: var(--Silky-white);
   position: relative;
-  top: 84px;
   z-index: 60;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border-bottom: 0.5px solid var(--Light-grey);
   justify-content: flex-start;
   margin: 0 auto;
   height: wrap-content;
