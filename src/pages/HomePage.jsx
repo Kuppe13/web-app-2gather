@@ -1,5 +1,3 @@
-// HUS IKON I NAVBAR
-
 import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard";
 import Header from "../components/Header";
