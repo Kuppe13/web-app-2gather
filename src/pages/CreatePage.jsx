@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Createpage.css";
+import ConfirmationAnimation from "../components/ConfirmationAnimation";
 
 const URL = import.meta.env.VITE_SUPABASE_URL;
 const headers = {
@@ -19,6 +20,7 @@ export default function CreatePage() {
   const [endTime, setEndTime] = useState("");
   const [location, setLocation] = useState("");
   const [organizerName, setOrganizerName] = useState("");
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -40,12 +42,13 @@ export default function CreatePage() {
     console.log("Status:", response.status);
     console.log("Success:", response.ok);
     if (response.ok) {
-      navigate("/");
-    } else {
-      alert("Eventet kunne ikke oprettes. Prøv igen.");
+setShowConfirmation(true);
     }
   }
 
+  if (showConfirmation) {
+    return <ConfirmationAnimation />;
+  }
   return (
     <main className="app create-page">
       <h1 className="page-title">Opret begivenhed</h1>

@@ -168,7 +168,8 @@ nav {
 
 .form-field label {
   font-weight: 600;
-  color: var(--dark-green);
+  color: var(--Indigo);
+  font-family: var(--body-font);
 }
 
 .form-field input,
