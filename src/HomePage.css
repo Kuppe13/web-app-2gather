@@ -57,9 +57,9 @@ a.post-card {
 
 .post-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr (minmax(200px, 1fr));
-  padding: 1em;
-  gap: 1em;
+  grid-template-columns: 1fr;
+  padding: 1em 1em 7rem;
+  gap: 1.25em;
 }
 
 .post-card {
@@ -109,11 +109,34 @@ a.post-card {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1em;
+  padding: 1.25em 1em 1.5em;
   color: var(--bg-color);
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   font-weight: 400;
   letter-spacing: 0.1px;
-  font-size: 0.6rem;
-  line-height: 0.5;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.post-card-title h2,
+.post-card-date,
+.post-card-time,
+.post-card-location {
+  margin: 0;
+}
+
+.post-card-date,
+.post-card-time,
+.post-card-location {
+  margin-top: 0.2em;
+}
+
+.post-card-location {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05em;
+}
+
+.post-card-location-line {
+  display: block;
 }
