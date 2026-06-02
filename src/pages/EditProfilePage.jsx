@@ -67,8 +67,8 @@ export default function EditProfilePage() {
           />
         </div>
 
-        <div className="form-actions">
-          <button type="submit" className="btn btn-primary">
+        <div className="edit-profile-actions">
+          <button type="submit" className="save-btn">
             Gem ændringer
           </button>
         </div>
