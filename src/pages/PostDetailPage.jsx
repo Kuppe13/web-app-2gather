@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import DeleteAnimation from "../components/DeleteAnimation";
 
 import "./PostDetailPage.css";
 
@@ -24,6 +25,7 @@ export default function PostDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [post, setPost] = useState({});
+  const [showDeleteAnimation, setShowDeleteAnimation] = useState(false);
 
   useEffect(() => {
     async function getPost() {
@@ -35,13 +37,21 @@ export default function PostDetailPage() {
     getPost();
   }, [id]);
 
+  if (showDeleteAnimation) {
+    return <DeleteAnimation />;
+  }
+
   async function handleDelete() {
     const confirmed = window.confirm("Delete this post?");
 
     if (!confirmed) return;
 
-    await fetch(`${URL}?id=eq.${id}`, { method: "DELETE", headers });
-    navigate("/");
+    await fetch(`${URL}?id=eq.${id}`, {
+      method: "DELETE",
+      headers,
+    });
+
+    setShowDeleteAnimation(true);
   }
 
   const formattedDate = post.date
