@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../profile.css";
+import profileImage from "../images/pb.avif";
+import "./EditProfilePage.css";
 
 export default function EditProfilePage() {
   const navigate = useNavigate();
@@ -8,26 +9,30 @@ export default function EditProfilePage() {
     localStorage.getItem("profileName") || "Kübra",
   );
   const [username, setUsername] = useState(
-    localStorage.getItem("profileUsername") || "@kubrafidan",
+    localStorage.getItem("profileUsername") || "kubrafidan",
   );
   const [about, setAbout] = useState(
     localStorage.getItem("profileAbout") ||
       "Jeg er lige flyttet til Aarhus og vil ud og opleve byen og måske møde nye mennesker med samme interesser!",
   );
 
-  async function handleSubmit(event) {
+  function handleSubmit(event) {
     event.preventDefault();
+    console.log("Gemmer data...");
     localStorage.setItem("profileName", name);
     localStorage.setItem("profileUsername", username);
     localStorage.setItem("profileAbout", about);
+    console.log("Data gemt, navigerer...");
     navigate("/profile");
   }
 
   return (
     <main className="app">
-      <h1 className="page-title">Rediger profil</h1>
+      <h1 className="page-title edit-profile-page-title">Rediger profil</h1>
 
-      <form className="post-form" onSubmit={handleSubmit}>
+      <img src={profileImage} alt="profile" className="profile-icon" />
+
+      <form className="edit-profile-form" onSubmit={handleSubmit}>
         <div className="form-field">
           <label htmlFor="name">Navn</label>
           <input

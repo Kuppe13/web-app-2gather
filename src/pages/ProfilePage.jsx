@@ -13,9 +13,11 @@ export default function ProfilePage() {
     setTimeout(() => {
       setUser({
         name: localStorage.getItem("profileName") || "Kübra Fidan",
-        brugernavn: localStorage.getItem("profileUsername") || "@kubrafidan",
+        brugernavn: localStorage.getItem("profileUsername") || "kubrafidan",
         lokation: "Aarhus V",
-        Beskrivelse: localStorage.getItem("profileAbout") || "Jeg elsker at gå til koncerter og festivaler! Jeg er altid på udkig efter nye musikoplevelser og elsker at dele mine oplevelser med andre.",
+        Beskrivelse:
+          localStorage.getItem("profileAbout") ||
+          "Jeg elsker at gå til koncerter og festivaler! Jeg er altid på udkig efter nye musikoplevelser og elsker at dele mine oplevelser med andre.",
       });
     }, 1000);
   }, []);
@@ -23,39 +25,51 @@ export default function ProfilePage() {
   return (
     <>
       <main className="app">
-        <h1 className="page-title">Profil</h1>
+        <h1 className="page-title profile-page-title">Profil</h1>
         {user ? (
           <>
             <div className="profile-container">
-              <div className="profile-header">
+              <div className="profile-left">
                 <img
                   src={profileImage}
                   alt="profile"
                   className="profile-icon"
                 />
+
+                <p className="username">@{user.brugernavn.replace(/^@/, "")}</p>
+
+                <h2>{user.name}</h2>
+
+                <p className="location">{user.lokation}</p>
               </div>
-              <div className="profile-info">
-                <p>
-                  <strong>Navn:</strong> {user.name}
-                </p>
-                <p>
-                  <strong>Brugernavn:</strong> {user.brugernavn}
-                </p>
-                <p>
-                  <strong>Lokation:</strong> {user.lokation}
-                </p>
+
+              <div className="profile-right">
+                <div className="stat">
+                  <h3>35</h3>
+                  <p>Venner</p>
+                </div>
+
+                <div className="stat">
+                  <h3>7</h3>
+                  <p>Begivenheder</p>
+                </div>
+
+                <div className="stat">
+                  <h3>6</h3>
+                  <p>Gemte events</p>
+                </div>
+
+                <Link to="/profile/edit" className="edit-btn">
+                  Rediger
+                </Link>
               </div>
             </div>
 
             <div className="profile-description">
               <p>
-                <strong>Beskrivelse:</strong> {user.Beskrivelse}
+                <strong>Om mig:</strong> {user.Beskrivelse}
               </p>
             </div>
-
-            <Link to="/profile/edit" className="btn btn-primary">
-              Rediger profil
-            </Link>
           </>
         ) : (
           <p>Henter profiloplysninger...</p>
