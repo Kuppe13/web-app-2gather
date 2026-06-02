@@ -9,6 +9,7 @@ import ChatPage from "./pages/ChatPage";
 import ProfilePage from "./pages/ProfilePage";
 import EditProfilePage from "./pages/EditProfilePage";
 import EditDetailPage from "./pages/EditDetailPage";
+import FilterBar from "./components/FilterBar";
 
 function App() {
   return (

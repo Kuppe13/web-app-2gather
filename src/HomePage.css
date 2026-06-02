@@ -31,7 +31,7 @@ a.post-card {
 }
 
 .feed-intro {
-  margin-top: 100px;
+  margin-top: 84px;
 }
 
 .page-title {
@@ -39,7 +39,9 @@ a.post-card {
   font-size: 1.5em;
   line-height: 0.5em;
   padding: 0 0 0 16px;
+  text-align: left;
 }
+
 .front-page-text {
   font-family: var(--body-font);
   font-size: 1rem;
@@ -53,6 +55,39 @@ a.post-card {
   margin-top: 0.1em;
   margin-bottom: 0;
   padding: 0 0 0 16px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  padding-bottom: 0.7rem;
+  overflow-x: auto;
+  background: var(--bg-color);
+  position: relative;
+  top: 84px;
+  z-index: 60;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  justify-content: flex-start;
+  margin: 0 auto;
+  height: wrap-content;
+}
+
+.filter-btn {
+  background: var(--Silky-white);
+  border: 0.5px solid var(--Indigo);
+  border-radius: 60px;
+  padding: 0.45rem 0.85rem;
+  font-weight: 700;
+  color: var(--Indigo);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filter-btn.is-active {
+  background: var(--Pang-orange);
+  color: var(--Indigo);
+  box-shadow: 3px 6px 18px rgba(0, 0, 0, 0.3);
 }
 
 .post-grid {
