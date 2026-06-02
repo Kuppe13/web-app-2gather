@@ -12,6 +12,13 @@
   padding: 16px 0 0 16px;
 }
 
+.edit-detail-page .form-field input,
+.edit-detail-page .form-field textarea {
+  border-radius: 14px;
+  background-color: var(--Silky-white);
+  font-family: var(--body-font);
+}
+
 .save-btn {
   background-color: var(--Pang-orange);
   color: var(--Indigo);
