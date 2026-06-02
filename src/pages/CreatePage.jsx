@@ -1,7 +1,6 @@
 // PLUS IKON I NAVBAR
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./Createpage.css";
 import ConfirmationAnimation from "../components/ConfirmationAnimation";
 
@@ -12,13 +11,13 @@ const headers = {
 };
 
 export default function CreatePage() {
-  const navigate = useNavigate();
   const [image, setImage] = useState("");
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
   const [location, setLocation] = useState("");
+  const [category, setCategory] = useState("");
   const [organizerName, setOrganizerName] = useState("");
   const [showConfirmation, setShowConfirmation] = useState(false);
 
@@ -35,6 +34,7 @@ export default function CreatePage() {
         start_time: startTime.trim(),
         end_time: endTime.trim(),
         location: location.trim(),
+        category: category.trim(),
         organizer_name: organizerName.trim(),
       }),
     });
@@ -42,7 +42,7 @@ export default function CreatePage() {
     console.log("Status:", response.status);
     console.log("Success:", response.ok);
     if (response.ok) {
-setShowConfirmation(true);
+      setShowConfirmation(true);
     }
   }
 
@@ -52,9 +52,7 @@ setShowConfirmation(true);
   return (
     <main className="app create-page">
       <h1 className="page-title">Opret begivenhed</h1>
-      <p className="page-subtitle">
-        Udfyld informationerne forneden
-      </p>
+      <p className="page-subtitle">Udfyld informationerne forneden</p>
       <form className="post-form" onSubmit={handleSubmit}>
         <div className="form-grid">
           <div className="form-field">
@@ -126,6 +124,18 @@ setShowConfirmation(true);
               placeholder="Hvor foregår dit event?"
               value={location}
               onChange={(event) => setLocation(event.target.value)}
+              required
+            />
+          </div>
+
+          <div className="form-field">
+            <label htmlFor="category">Kategori</label>
+            <input
+              id="category"
+              name="category"
+              placeholder="Tildel en kategori til dit event"
+              value={category}
+              onChange={(event) => setCategory(event.target.value)}
               required
             />
           </div>

@@ -17,6 +17,7 @@ export default function EditDetailPage() {
   const [date, setDate] = useState("");
   const [location, setLocation] = useState("");
   const [time, setTime] = useState("");
+  const [category, setCategory] = useState("");
   const [organizer, setOrganizer] = useState(
     localStorage.getItem("profileName") || "",
   );
@@ -32,6 +33,7 @@ export default function EditDetailPage() {
         setDescription(data[0].description || "");
         setDate(data[0].date || "");
         setLocation(data[0].location || "");
+        setCategory(data[0].category || "");
         setOrganizer(
           data[0].organizer_name || localStorage.getItem("profileName") || "",
         );
@@ -132,6 +134,16 @@ export default function EditDetailPage() {
             name="location"
             value={location}
             onChange={(event) => setLocation(event.target.value)}
+          />
+        </div>
+
+        <div className="form-field">
+          <label htmlFor="category">Kategori</label>
+          <input
+            id="category"
+            name="category"
+            value={category}
+            onChange={(event) => setCategory(event.target.value)}
           />
         </div>
 
