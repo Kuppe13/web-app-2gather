@@ -67,12 +67,12 @@
   cursor: pointer;
 }
 
-.form-actions {
+.edit-profile-actions {
   display: flex;
   justify-content: center;
   margin-top: 24px;
 }
 
-.form-actions button {
+.edit-profile-actions button {
   cursor: pointer;
 }
