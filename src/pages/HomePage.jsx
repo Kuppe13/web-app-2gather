@@ -1,5 +1,3 @@
-// HUS IKON I NAVBAR
-import Preloader from "../components/Preloader";
 import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard";
 import Header from "../components/Header";
@@ -28,7 +26,6 @@ export default function HomePage() {
 
   return (
     <>
-      <Preloader />
       <Header />
       <main className="app">
         <section className="feed-intro">

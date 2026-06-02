@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Preloader from "./components/Preloader";
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
 import CreatePage from "./pages/CreatePage";
@@ -11,11 +12,13 @@ import EditProfilePage from "./pages/EditProfilePage";
 import EditDetailPage from "./pages/EditDetailPage";
 
 function App() {
+  const location = useLocation();
   return (
     <>
-      <NavBar />
+      {location.pathname !== "/" && <NavBar />}
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Preloader />} />
+        <Route path="/home" element={<HomePage />} />
         <Route path="/createPage" element={<CreatePage />} />
         <Route path="/posts/:id" element={<PostDetailPage />} />
         <Route path="/posts/:id/update" element={<UpdatePage />} />

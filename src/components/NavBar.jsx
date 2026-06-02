@@ -8,7 +8,7 @@ import profileIcon from "../icons/profile-icon.svg";
 export default function NavBar() {
   return (
     <nav>
-      <NavLink to="/">
+      <NavLink to="/home">
         <img src={homeIcon} alt="Home icon" />
       </NavLink>
       <NavLink to="/favorites">
