@@ -1,6 +1,6 @@
 {
-  "name": "post-app-supabase-2",
-  "base": "/post-app-supabase-2/",
+  "name": "web-app-2gather",
+  "base": "/web-app-2gather/",
   "private": true,
   "version": "1.0.0",
   "type": "module",
