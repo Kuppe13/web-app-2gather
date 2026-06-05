@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/post-app-supabase-2/",
+  base: "/web-app-2gather/",
 });
