@@ -18,9 +18,7 @@ export default function EditDetailPage() {
   const [location, setLocation] = useState("");
   const [time, setTime] = useState("");
   const [category, setCategory] = useState("");
-  const [organizer, setOrganizer] = useState(
-    localStorage.getItem("profileName") || "",
-  );
+  const [organizer, setOrganizer] = useState("");
 
   useEffect(() => {
     async function getPost() {
@@ -34,37 +32,58 @@ export default function EditDetailPage() {
         setDate(data[0].date || "");
         setLocation(data[0].location || "");
         setCategory(data[0].category || "");
-        setOrganizer(
-          data[0].organizer_name || localStorage.getItem("profileName") || "",
-        );
+        setOrganizer(data[0].organizer_name || "");
+        if (data[0].start_time) setTime(data[0].start_time.slice(0, 5));
       }
     }
 
     getPost();
   }, [id]);
 
+  async function patchPost(payload) {
+    return await fetch(`${URL}?id=eq.${id}`, {
+      method: "PATCH",
+      headers,
+      body: JSON.stringify(payload),
+    });
+  }
+
   async function handleSubmit(event) {
     event.preventDefault();
+
     localStorage.setItem("eventTitle", title);
     localStorage.setItem("eventDescription", description);
     localStorage.setItem("eventDate", date);
     localStorage.setItem("eventLocation", location);
     localStorage.setItem("profileName", organizer);
 
-    await fetch(`${URL}?id=eq.${id}`, {
-      method: "PATCH",
-      headers,
-      body: JSON.stringify({
+    try {
+      const payload = {
         image: image.trim(),
         title: title.trim(),
         description: description.trim(),
         date: date.trim(),
+        category: category.trim(),
         location: location.trim(),
         organizer_name: organizer.trim(),
-      }),
-    });
+      };
 
-    navigate(`/posts/${id}`);
+      if (time.trim()) payload.start_time = time.trim();
+
+      const res = await patchPost(payload);
+
+      if (!res.ok) {
+        const text = await res.text();
+        console.error("Update failed:", res.status, text);
+        alert("Kunne ikke gemme ændringer (status: " + res.status + ")");
+        return;
+      }
+
+      navigate(`/posts/${id}`);
+    } catch (err) {
+      console.error(err);
+      alert("Netværksfejl: " + err.message);
+    }
   }
 
   return (
