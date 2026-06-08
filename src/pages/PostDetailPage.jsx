@@ -133,7 +133,7 @@ export default function PostDetailPage() {
             <button className="join-btn">Deltag</button>
             <button
               className="edit-btn"
-              onClick={() => navigate(`/edit/${id}`)}
+              onClick={() => navigate(`/posts/${id}/edit`)}
             >
               Rediger
             </button>
